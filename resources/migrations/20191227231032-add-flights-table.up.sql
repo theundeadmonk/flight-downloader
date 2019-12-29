@@ -1,0 +1,11 @@
+CREATE TABLE premium_flights (
+  id SERIAL PRIMARY KEY,
+  external_id INTEGER UNIQUE NOT NULL,
+  description TEXT NOT NULL,
+  origin VARCHAR(100),
+  destination VARCHAR(100),
+  flight_class VARCHAR(30),
+  amount NUMERIC(10, 4),
+  currency VARCHAR(3),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP)
